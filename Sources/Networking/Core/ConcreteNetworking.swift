@@ -137,7 +137,6 @@ extension ConcreteNetworking {
                     verb: request.verb!),
                 requestHeaders: request.headers)
             
-            print(transformed)
             let (data, response) = try await data(for: transformed)
             
             try await processResponse(data: data, response: response)
